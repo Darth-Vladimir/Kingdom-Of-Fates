@@ -1,8 +1,11 @@
-local deck = {}
+
 local PlayDeck ={} -- clone of deck 
 local deckName
-local deckSize = 40
+
+local player = require("player")
 local card = require( "card" )
+local deck = player.LoadDeck()
+
 function deck.setName(Name)
 	deckName=Name
 end
@@ -48,13 +51,6 @@ function deck.removeCard(position)
 		local CurCard = unpack(PlayDeck,position)
 		table.remove(PlayDeck,position)
 	end
-end
---Starter Deck
---loads a default starter deck from server into cards
-for i = 1,deckSize do
-	--Name, Description, Element, Type, Image, Effects, Attack, Defence, Level, Parent is retreived from server
-	local CurCard = card.new(Name, Description, Element, Type, Image, Effects, Attack, Defence, Level, Parent)
-	table.insert(deck,#deck,CurCard)
 end
 
 return deck
