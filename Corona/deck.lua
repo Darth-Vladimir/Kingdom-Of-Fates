@@ -53,4 +53,12 @@ function deck.removeCard(position)
 	end
 end
 
+function deck.getPlayDeck()
+	if #PlayDeck > 0
+		return PlayDeck
+	else
+		return nil
+	end
+end
+
 return deck

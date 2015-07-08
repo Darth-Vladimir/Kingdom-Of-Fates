@@ -61,5 +61,8 @@ function field.add(Card)
 		table.insert(AreaField,#MonsterField,Card)
 	end
 end
-
+function field.selectMonster(pos)
+	local Card = unpack(MonsterField,pos)
+	return Card
+end
 return field
