@@ -1,19 +1,14 @@
 local card = require("card")
-local deck = require("deck")
+
 local player = {}
 local cards = {}
 local lifepoints -- Dink lifepoints moet 'n variable wees in game self.
-local field = require("field")
+local field -- Selfde vir field
 local hand -- en hand
-local ActualDeck = {}
+local deck = {}
 local deckSize
 
-function player.getField()
-	return field
-end
-function player.getInGameDeck()
-	return deck.getPlayDeck()
-end
+
 function player.setName()
 end
 --Connects to server and loads cards
@@ -28,7 +23,7 @@ function player.LoadDeck()
 	for i = 1,deckSize do
 		--Name, Description, Element, Type, Image, Effects, Attack, Defence, Level, Parent is retreived from server
 		local CurCard = card.new(Name, Description, Element, Type, Image, Effects, Attack, Defence, Level, Parent)
-		table.insert(ActualDeck,#ActualDeck,CurCard)
+		table.insert(deck,#deck,CurCard)
 	end
 end
 
