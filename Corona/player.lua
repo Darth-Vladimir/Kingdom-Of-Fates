@@ -3,7 +3,7 @@ local card = require("card")
 local player = {}
 local cards = {}
 local lifepoints -- Dink lifepoints moet 'n variable wees in game self.
-local field -- Selfed vir field
+local field -- Selfde vir field
 local hand -- en hand
 local deck = {}
 local deckSize

@@ -40,14 +40,14 @@ function deck.Insert(SomeCard)
 end
 --Get card a specific position
 function deck.GetCard(position)
-	if position<=#PlayDeck then
+	if position <= #PlayDeck then
 		local CurCard = unpack(PlayDeck,position)
 		return CurCard
 	end
 end
 --Remove card at position
 function deck.removeCard(position)
-	if position<=#PlayDeck then
+	if position <= #PlayDeck then
 		local CurCard = unpack(PlayDeck,position)
 		table.remove(PlayDeck,position)
 	end
